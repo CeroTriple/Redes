@@ -1,0 +1,38 @@
+CAPA 3 DEL MODELO OSI - CAPA DE RED
+
+1. Definición y Propósito:
+La Capa de Red es la tercera capa del modelo OSI. Su función principal es el encaminamiento (routing) y el direccionamiento lógico, permitiendo que los datos viajen a través de diferentes redes interconectadas (internetworking).
+
+2. Funciones Principales:
+
+    Direccionamiento Lógico: Asignación de direcciones únicas (IP) a los dispositivos finales. Permite identificar de forma jerárquica a los nodos en la red, independientemente de su dirección física (MAC).
+
+    Encaminamiento (Routing): Selección de la mejor ruta física para que los paquetes atraviesen la red desde el origen al destino, utilizando protocolos de enrutamiento (ej. OSPF, BGP, RIP).
+
+    Fragmentación y Reensamblado: Si un paquete es demasiado grande para el MTU (Maximum Transmission Unit) del medio físico que debe atravesar, la Capa 3 divide el paquete en fragmentos más pequeños y el destino los reensambla.
+
+    Determinación de la Ruta: Basada en tablas de enrutamiento que mantienen los routers, que son los dispositivos clave de esta capa.
+
+3. Unidad de Datos de Protocolo (PDU):
+
+    La PDU de la Capa 3 es el Paquete.
+
+4. Elementos de la PDU (Cabecera):
+
+    Dirección IP de origen.
+
+    Dirección IP de destino.
+
+    Información de control (ej. TTL - Time to Live, para evitar bucles, y protocolos de fragmentación).
+
+5. Dispositivos de Interconexión:
+
+    Routers: Toman decisiones de envío basadas en la dirección de red de destino.
+
+    Switches de Capa 3 (Multilayer Switches): Capaces de realizar funciones de encaminamiento IP además de la conmutación tradicional de Capa 2.
+
+6. Diferencia con Capa 2 (Enlace de Datos):
+
+    Capa 2: Gestiona la entrega local (trama) basada en direcciones físicas (MAC) dentro de un mismo segmento de red.
+
+    Capa 3: Gestiona la entrega extremo a extremo (paquete) a través de múltiples segmentos de red o diferentes tipos de redes (internet) utilizando direccionamiento lógico.

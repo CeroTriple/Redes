@@ -1,0 +1,48 @@
+Aquí tienes el resumen de la Capa 7 del modelo OSI para completar tu documentación técnica.
+RESUMEN: CAPA 7 DEL MODELO OSI - CAPA DE APLICACIÓN
+
+1. Definición y Propósito:
+La Capa de Aplicación es la capa superior del modelo OSI. Es el punto donde las aplicaciones de software (navegadores, clientes de correo, clientes FTP, terminales) interactúan directamente con la red. Su función es proporcionar los servicios de red necesarios para que las aplicaciones del usuario final puedan comunicarse y compartir información.
+
+2. Funciones Principales:
+
+    Interfaz de Usuario: Proporciona los servicios de red necesarios para el software (ej. la interfaz gráfica de un navegador).
+
+    Identificación de los Interlocutores: Determina si los recursos necesarios para la comunicación están disponibles y son accesibles.
+
+    Sincronización de aplicaciones: Gestiona las reglas de comunicación entre aplicaciones (por ejemplo, cómo se intercambian los archivos entre un servidor y un cliente).
+
+    Acceso a Servicios de Red: Gestiona protocolos específicos para tareas concretas (transferencia de archivos, correo, gestión remota, navegación web).
+
+3. Unidad de Datos de Protocolo (PDU):
+
+    La PDU de la Capa 7 son los Datos (a menudo referidos como Payload o datos de usuario).
+
+4. Protocolos Comunes:
+
+    HTTP/HTTPS: Navegación web.
+
+    FTP/SFTP: Transferencia de archivos.
+
+    SMTP/IMAP/POP3: Correo electrónico.
+
+    DNS: Resolución de nombres de dominio.
+
+    SSH: Acceso remoto seguro a terminales.
+
+    DHCP: Configuración automática de red.
+
+5. Importancia Forense:
+En el análisis forense, esta capa es donde se encuentra la mayor cantidad de evidencia de actividad humana:
+
+    Logs de aplicaciones: Aquí es donde se registran los comandos ejecutados por el usuario, las páginas web visitadas (historial), los nombres de los archivos descargados o los correos enviados.
+
+    Análisis de comportamiento: Al capturar tráfico de esta capa, el analista puede ver el contenido "en claro" de lo que el usuario estaba haciendo, permitiendo reconstruir la actividad delictiva o el uso legítimo de un equipo.
+
+6. Relación con las capas inferiores:
+
+    Capas 1-4: Construyen la infraestructura y aseguran que los datos lleguen de un punto A a un punto B.
+
+    Capa 5-6: Gestionan la sesión y preparan/traducen los datos.
+
+    Capa 7: Es el resultado final, el contenido que el usuario genera, manipula o consume (el archivo que se subió, el comando que se envió, la web que se cargó).

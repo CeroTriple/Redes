@@ -1,0 +1,11 @@
+Funciones Principales :
+    Empaquetado (Framing): Toma los paquetes de datos de la Capa 3 y les añade un encabezado y un tráiler para convertirlos en tramas (frames). El encabezado contiene las direcciones físicas MAC.
+    Direccionamiento Físico: Utiliza la dirección MAC (un identificador único de 48 bits que tiene cada tarjeta de red) para asegurar que los datos lleguen al dispositivo correcto dentro de la red local.
+    Detección de Errores: Añade información en el tráiler de la trama (como el CRC o código de redundancia cíclica) para que el receptor pueda verificar si los datos llegaron intactos o si se corrompieron durante el trayecto.
+    Control de Acceso al Medio (MAC): Regula qué dispositivo puede transmitir datos en un momento dado y evita que las señales colisionen entre sí en redes compartidas
+Subcapas de la capa 2
+    LLC (Control de Enlace Lógico): Se encarga de comunicarse con las capas superiores (Capa de Red). Identifica los protocolos de red y gestiona el flujo de información para que el emisor no sature al receptor.
+    MAC (Control de Acceso al Medio): Se encarga de la comunicación con la Capa Física. Controla cómo los dispositivos acceden físicamente al cable o medio inalámbrico y administra el direccionamiento físico.
+Dipositivos y Protocolos:
+    Equipos de red: En esta capa operan dispositivos clave como los switches, los puntos de acceso Wi-Fi y las tarjetas de red (NIC).
+    Protocolos comunes: Los más utilizados incluyen Ethernet para redes cableadas, Wi-Fi (IEEE 802.11) para redes inalámbricas, y protocolos más antiguos como Token Ring o PPP.

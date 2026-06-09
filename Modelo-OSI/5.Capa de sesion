@@ -1,0 +1,43 @@
+CAPA 5 DEL MODELO OSI - CAPA DE SESIÓN
+
+1. Definición y Propósito:
+La Capa de Sesión es la quinta capa del modelo OSI. Su función principal es establecer, gestionar, mantener y finalizar las sesiones de comunicación entre aplicaciones de red en distintos dispositivos. Permite que los procesos se comuniquen de forma organizada, asegurando que la conexión permanezca abierta el tiempo necesario para completar el intercambio de datos.
+
+2. Funciones Principales:
+
+    Establecimiento, Gestión y Finalización: Controla el diálogo entre los dos extremos. Determina quién transmite, cuándo y durante cuánto tiempo.
+
+    Sincronización: Inserta puntos de control (checkpoints) en el flujo de datos. Si la comunicación se interrumpe, la sesión puede reanudarse desde el último punto de sincronización exitoso en lugar de reiniciar toda la transferencia.
+
+    Control del Diálogo: Determina el modo de comunicación:
+
+        Simplex: Unidireccional.
+
+        Half-duplex: Bidireccional alternado (ambos pueden hablar, pero no al mismo tiempo).
+
+        Full-duplex: Bidireccional simultáneo (ambos transmiten y reciben a la vez).
+
+3. Unidad de Datos de Protocolo (PDU):
+
+    La PDU de la Capa 5 son los Datos (a este nivel, la información aún se considera un bloque de datos que será segmentado por la Capa 4).
+
+4. Ejemplos de Protocolos y Servicios:
+
+    RPC (Remote Procedure Call): Permite que un programa ejecute un procedimiento en otro espacio de direcciones (normalmente en otro equipo).
+
+    NetBIOS: Utilizado para permitir aplicaciones en diferentes ordenadores comunicarse dentro de una red de área local.
+
+    PPTP (Point-to-Point Tunneling Protocol): Aunque abarca varias capas, su gestión de túneles depende de la lógica de sesión.
+
+5. Importancia Forense:
+En análisis forense, la Capa 5 es crucial para entender la persistencia de una conexión. Por ejemplo, el análisis de sesiones de red permite detectar:
+
+    Sesiones huérfanas o anómalas: Conexiones que permanecen abiertas más tiempo de lo normal, sugiriendo túneles de exfiltración de datos o comunicación con servidores de mando y control (C2).
+
+    Interrupción de flujos: Ayuda a reconstruir qué parte de una transferencia fue completada antes de un corte.
+
+6. Diferencia con Capa 4 (Transporte):
+
+    Capa 4: Se encarga de la fiabilidad del transporte de bits (ej. ¿llegó el paquete?, ¿está dañado?).
+
+    Capa 5: Se encarga de la lógica de la "conversación" (ej. ¿estamos conectados?, ¿podemos retomar la sesión si se corta?, ¿quién habla ahora?).

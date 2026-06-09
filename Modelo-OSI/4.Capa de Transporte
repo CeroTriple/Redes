@@ -1,0 +1,42 @@
+CAPA 4 DEL MODELO OSI - CAPA DE TRANSPORTE
+
+1. Definición y Propósito:
+La Capa de Transporte es la cuarta capa del modelo OSI. Actúa como el puente entre las capas superiores (que gestionan los datos/aplicación) y las capas inferiores (que gestionan la red y el hardware). Su función principal es la comunicación extremo a extremo (end-to-end) entre procesos o aplicaciones en diferentes hosts.
+
+2. Funciones Principales:
+
+    Segmentación: Divide los datos provenientes de la Capa de Sesión en unidades más pequeñas llamadas "segmentos" para su transmisión.
+
+    Control de Flujo: Regula la velocidad de envío de datos para evitar que un emisor rápido sature a un receptor más lento.
+
+    Control de Errores: Verifica que los datos lleguen íntegros. Si un segmento se pierde o se corrompe, la capa se encarga de solicitar su retransmisión.
+
+    Multiplexación y Control de Puertos: Utiliza puertos (ej. 80 para HTTP, 443 para HTTPS) para asegurar que los datos entregados lleguen a la aplicación correcta dentro del host destino.
+
+3. Unidad de Datos de Protocolo (PDU):
+
+    La PDU de la Capa 4 es el Segmento (en el caso de TCP) o Datagrama (en el caso de UDP).
+
+4. Protocolos Principales:
+
+    TCP (Transmission Control Protocol): Orientado a conexión. Garantiza la entrega ordenada, libre de errores y confirmada de los datos. Ideal para servicios donde la integridad es vital (web, correo, transferencia de archivos).
+
+    UDP (User Datagram Protocol): Sin conexión. No garantiza entrega ni orden; es mucho más rápido y ligero. Ideal para aplicaciones en tiempo real donde la velocidad prima sobre la precisión (streaming, VoIP, juegos online).
+
+5. Elementos de la Cabecera:
+
+    Puerto de origen.
+
+    Puerto de destino.
+
+    Número de secuencia (para reensamblado en TCP).
+
+    Flags de control (SYN, ACK, FIN, RST).
+
+    Checksum (para detección de errores).
+
+6. Diferencia con Capa 3 (Red):
+
+    Capa 3: Se encarga de mover paquetes de un dispositivo (IP) a otro dispositivo a través de la infraestructura de red.
+
+    Capa 4: Se encarga de entregar los datos a la aplicación (Puerto) específica dentro de ese dispositivo.

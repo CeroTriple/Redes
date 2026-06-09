@@ -1,0 +1,41 @@
+CAPA 6 DEL MODELO OSI - CAPA DE PRESENTACIÓN
+
+1. Definición y Propósito:
+La Capa de Presentación es la sexta capa del modelo OSI. Actúa como el "traductor" de la red. Su objetivo principal es garantizar que la información enviada desde la Capa de Aplicación de un sistema pueda ser leída e interpretada correctamente por la Capa de Aplicación de otro sistema, independientemente de las diferencias en el formato de datos, codificación o sintaxis.
+
+2. Funciones Principales:
+
+    Traducción (Codificación): Convierte los datos de un formato dependiente del sistema (ej. EBCDIC a ASCII o binario) a un formato estándar de red.
+
+    Cifrado y Seguridad: Es el lugar donde se gestiona el cifrado y descifrado de datos (ej. SSL/TLS) para garantizar la confidencialidad antes de enviar la información a través de la red.
+
+    Compresión: Reduce el tamaño de los datos para optimizar el ancho de banda y la velocidad de transmisión antes de enviarlos a la Capa de Sesión.
+
+    Formateo de datos: Define la estructura de los datos (ej. imágenes como JPEG/PNG, video como MPEG, archivos cifrados o comprimidos).
+
+3. Unidad de Datos de Protocolo (PDU):
+
+    La PDU de la Capa 6 sigue siendo considerada Datos (o Presentation Data).
+
+4. Protocolos y Estándares Comunes:
+
+    SSL/TLS: Protocolos de seguridad que cifran la comunicación.
+
+    Formatos de archivos: JPEG, GIF, TIFF, MPEG.
+
+    Estándares de representación de datos: ASCII, EBCDIC, Unicode, XML, JSON.
+
+5. Importancia Forense:
+Esta capa es crítica para el análisis de pruebas digitales:
+
+    Análisis de Cifrado: Si el tráfico ha sido capturado, la Capa 6 es donde se determina si los datos están protegidos y qué algoritmos se utilizaron.
+
+    Reconstrucción de Archivos: Para reconstruir un archivo (una foto o un documento exfiltrado), el analista debe entender cómo fue formateado o comprimido en esta capa para poder "abrirlo" correctamente en el entorno forense.
+
+6. Diferencia con las capas adyacentes:
+
+    Capa 5 (Sesión): Gestiona el diálogo y la sincronización de la conversación.
+
+    Capa 6 (Presentación): Gestiona la forma y el significado de los datos (la sintaxis y la seguridad).
+
+    Capa 7 (Aplicación): Es la interfaz directa con el usuario final (donde se generan los datos).
