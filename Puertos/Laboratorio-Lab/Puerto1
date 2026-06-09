@@ -1,0 +1,199 @@
+# Laboratorio 001 - Puertos y Servicios en Linux
+
+## Objetivo
+
+Aprender a identificar puertos abiertos, protocolos utilizados y servicios activos en mi sistema Linux utilizando el comando:
+
+```bash
+ss -tuln
+```
+
+## Comando utilizado
+
+```bash
+ss -tuln
+```
+
+### Significado de cada parámetro
+
+* `s` → Socket Statistics.
+* `-t` → Muestra conexiones TCP.
+* `-u` → Muestra conexiones UDP.
+* `-l` → Muestra únicamente puertos en escucha (Listening).
+* `-n` → Muestra números de puerto sin resolver nombres.
+
+---
+
+## Resultado observado
+
+El comando mostró varios puertos TCP y UDP activos en mi equipo.
+
+### Puertos UDP observados
+
+Encontré varios puertos UDP en estado:
+
+```text
+UNCONN
+```
+
+Esto significa que están abiertos y disponibles para recibir tráfico, pero actualmente no tienen una conexión establecida.
+
+Entre ellos observé:
+
+```text
+5353
+53
+546
+```
+
+### Análisis
+
+#### Puerto UDP 5353
+
+Corresponde normalmente a:
+
+```text
+mDNS (Multicast DNS)
+```
+
+Se utiliza para descubrimiento automático de dispositivos dentro de la red local.
+
+#### Puerto UDP 53
+
+Corresponde a:
+
+```text
+DNS
+```
+
+Mi sistema lo utiliza para resolver nombres de dominio.
+
+Ejemplo:
+
+```text
+google.com
+↓
+142.250.x.x
+```
+
+#### Puerto UDP 546
+
+Corresponde normalmente a:
+
+```text
+DHCPv6 Client
+```
+
+Relacionado con la asignación automática de direcciones IPv6.
+
+---
+
+## Puertos TCP observados
+
+Encontré varios puertos TCP en estado:
+
+```text
+LISTEN
+```
+
+Esto significa que existe un servicio esperando conexiones.
+
+Observé:
+
+```text
+53
+631
+36492
+```
+
+### Análisis
+
+#### Puerto TCP 53
+
+Servicio DNS local.
+
+#### Puerto TCP 631
+
+Corresponde a:
+
+```text
+IPP (Internet Printing Protocol)
+```
+
+Normalmente pertenece al servicio CUPS utilizado para impresoras en Linux.
+
+#### Puerto TCP 36492
+
+Puerto dinámico o efímero.
+
+Generalmente es utilizado temporalmente por alguna aplicación del sistema.
+
+---
+
+## Direcciones observadas
+
+### 127.0.0.1
+
+```text
+Loopback
+```
+
+Representa mi propia computadora.
+
+Todo el tráfico dirigido a esta dirección permanece dentro del equipo.
+
+### 0.0.0.0
+
+Significa:
+
+```text
+Todas las interfaces
+```
+
+El servicio puede escuchar conexiones desde cualquier interfaz de red disponible.
+
+ [::1]
+
+Es la dirección loopback de IPv6.
+
+Equivale a:
+
+```text
+127.0.0.1
+```
+
+pero para IPv6.
+
+---
+
+ Relación con el Modelo OSI
+
+Durante este laboratorio observé principalmente:
+
+ Capa 4 - Transporte
+
+Protocolos:
+
+text
+TCP
+UDP
+
+
+Puertos:
+
+text
+53
+631
+5353
+546
+
+
+Capa 3 - Red
+
+Direcciones:
+
+text
+127.0.0.1
+IPv6
+0.0.0.0
+
