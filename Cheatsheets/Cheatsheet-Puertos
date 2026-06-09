@@ -1,0 +1,63 @@
+CHEAT SHEET: PUERTOS Y PROTOCOLOS 
+
+    RANGOS DE PUERTOS
+
+    Bien Conocidos: 0 - 1023 (Servicios criticos, requieren root).
+
+    Registrados: 1024 - 49151 (Aplicaciones especificas, bases de datos).
+
+    Dinamicos/Privados: 49152 - 65535 (Asignados temporalmente a clientes).
+
+    PUERTOS CRITICOS (WELL-KNOWN)
+
+    20/21: FTP (Transferencia de archivos)
+
+    22: SSH (Gestion remota segura)
+
+    23: Telnet (Gestion remota insegura - texto plano)
+
+    25: SMTP (Envio de email)
+
+    53: DNS (Resolucion de nombres)
+
+    80: HTTP (Web sin cifrar)
+
+    110: POP3 (Recepcion de email)
+
+    143: IMAP (Gestion de email)
+
+    443: HTTPS (Web cifrada)
+
+    3389: RDP (Escritorio remoto)
+
+    BASES DE DATOS COMUNES (REGISTRADOS)
+
+    1433: MS SQL Server
+
+    3306: MySQL / MariaDB
+
+    5432: PostgreSQL
+
+    6379: Redis
+
+    27017: MongoDB
+
+    COMANDOS LINUX PARA AUDITORIA DE PUERTOS
+
+    ss -tulpn: Lista todos los puertos en escucha y sus procesos asociados.
+
+    netstat -tulnp: Alternativa clasica para ver puertos y PIDs.
+
+    lsof -i :[puerto]: Identifica el proceso especifico usando un puerto.
+
+    fuser [puerto]/tcp: Muestra el PID del proceso que utiliza el puerto.
+
+    CHECKLIST DE ANALISIS FORENSE (RED)
+
+    Estado: ¿El puerto esta en LISTEN (espera) o ESTABLISHED (conexion activa)?
+
+    PID: ¿Que proceso es el dueño del puerto? (Comparar con binarios legitimos).
+
+    Host Remoto: ¿Quien es la IP destino/origen? (Buscar conexiones salientes hacia IPs sospechosas).
+
+    Persistencia: ¿El puerto se abre al iniciar el sistema? (Revisar servicios/cron).

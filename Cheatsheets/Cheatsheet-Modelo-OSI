@@ -1,0 +1,16 @@
+El Modelo OSI es un marco conceptual estandarizado creado por la ISO. Su objetivo es dividir el complejo proceso de comunicacion de redes en 7 capas independientes . Esto Permite que los distintos sistemas y tegnologias de diferentes fabricantes se comuniquen entre si de manera fuida.
+Se divide en las siguientes (Del mas bajo al mas alto):
+1.Capa Fisica:
+    Gestiona los aspectos fisicos de la conexion . Define como los datos seconvierten en señales electricas, opticas o de radio y manejo los cables , tarjetas de red y frecuencias
+2.Capa de Enlace de Datos:
+    Facilita la transferencia de datos directamente conectada entre dos dispositivos . Organiza los bits en "tramas" y controla los erroes fisicos, ademas de utilizar las direcciones MAC.
+3.Capa de Red:
+    Se encarga del enrutamiento y el direccionamiento logico. Es aqui dondeoperan las direcciones IP, determinando cual es la mejor ruta para que los datos lleguen a su destino final.
+4.Capa de transporte:
+    Garantiza que los datos se entreguen completos, en orden y sin errores entre el origen y el destino . Controla el flujo de la informacion y utiliza protocolos clave como TCP y UDP.
+5.Capa de sesion:
+    Controla y mantiene las conexiones activas entre las computadoras. Se encarga de abrir , mantener y cerrar las sesiones de comunicacion entre las aplicaciones.
+6.Capa de protecion:
+    Traduce, cifra y comprime los datos para que puedan ser entendidos por la aplicacion receptora. Actua como un "traductor" universal de formatos(como JPG , MP3 o ASCII).
+    7.Capa de aplicacion: 
+    Es la capa mas cercana al usuario. Interactua directamente con aplicaciones de sofware(como navegadores web, clientes de correo o FTP) para ofrecer servicios de red . Aqui operan protocolos como HTTP,SMTP y DNS.
