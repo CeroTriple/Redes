@@ -1,0 +1,17 @@
+Es la base de toda la red . Se encarga de transformar y transmitir los datos binarios (01) entre dispositivos mediante señales electricas, optcas o de radio. Define el hardware, los cables y las conexiones fisicas de la red.
+1.¿Como funciona?:
+    Los datos viajan dentro de tu computadora como informacion logica.
+    La capa fisica traduce esos bits en señales que pueden viajar por un medio fisico.
+    Al llegar al destino , el receptor decodifica estas señales y las transforma nuevamente en bits para que a las capas superiores.
+2.Tipos de mediosde transmision:
+    Cable de Cobre: Transmite lo bits mediante impulsos electricos (variaciones de votaje). Ejemplos : Cables coaxiles o Ethernet RJ45
+    Fibra obtica: Transmite los bits mediante pulsos de luz . Es ideal para largas distancias y altas velocidades.
+    Inalambrico (Wi-Fi, Bluetooh , 5G): Transmite los bits a traves del aire mediante ondas electromanegticas o microondas.
+3.Aspectos tecnicos que define:
+    Especificaciones mecanicas y electricas: Lasformas y tamaños de los conectores (como losenchufes de un cble de re), el uso de los pines y el voltaje exacto necesario para representar un 1 o 0.
+    Velocidad y tiempo : Define la cantidad de bits que sepueden transferir por segundo (ancho de banda) y establece un reloj (sincronizacion) para que el emisor y el receptor mrquen el mismo ritmo.
+    Topologia fiica: Ladisposicion en la que estan conectos los equipos (Estrela, bus o anilo).
+4.Ejemplos de hardware en esta capa :
+    Tarjeta de interfaz de red (NIC).
+    Hubs y repetidores
+    Cables, conectores y pneles de conexion
