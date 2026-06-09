@@ -1,0 +1,40 @@
+PUERTOS REGISTRADOS (Registered Ports: 1024 - 49151)
+
+1. Definición:
+Estos puertos son designados por la IANA (Internet Assigned Numbers Authority) para entidades específicas o aplicaciones comerciales. A diferencia de los "Bien Conocidos" (0-1023), no están reservados estrictamente para protocolos de sistema operativo, sino para aplicaciones de terceros, entornos de desarrollo y servicios de software comunes.
+
+2. Características Clave:
+
+    Uso Flexible: Son utilizados comúnmente por software de bases de datos, servidores de aplicaciones, servicios de juegos o herramientas de administración.
+
+    Sin privilegios especiales: Generalmente, cualquier usuario (no solo root) puede abrir un puerto en este rango en un sistema Linux, lo cual es relevante para la detección de procesos maliciosos que intentan ocultarse.
+
+    Conflictos: Al no ser servicios críticos del sistema, es más probable encontrar software legítimo y malware utilizando los mismos puertos en este rango.
+
+3. Ejemplos de Puertos Registrados en Análisis Forense:
+
+    1433: Microsoft SQL Server.
+
+    1521: Oracle Database.
+
+    3306: MySQL / MariaDB.
+
+    5432: PostgreSQL.
+
+    5900: VNC (Escritorio remoto - a menudo objetivo de intrusiones).
+
+    6379: Redis (Almacenamiento en caché - frecuente en ataques por mala configuración).
+
+    8080: Alternativa común para servicios web (HTTP proxy / Tomcat).
+
+    8443: Alternativa para HTTPS.
+
+    27017: MongoDB.
+
+4. Importancia Forense:
+
+    Identificación de aplicaciones: Encontrar un puerto abierto en este rango suele ser la clave para saber qué software está instalado en la máquina (ej. si ves el 3306, sabes que hay un motor de base de datos MySQL).
+
+    Detección de 'Backdoors': Muchos troyanos y puertas traseras modernas utilizan puertos registrados para pasar desapercibidos, ya que el administrador de red puede pasar por alto estos puertos al revisar el tráfico (a diferencia de los puertos obvios como 80 o 443).
+
+    Correlación de procesos: Es vital utilizar lsof o ss para verificar que el binario que abre estos puertos sea el legítimo de la aplicación y no un ejecutable malicioso oculto en /tmp o /dev/shm.

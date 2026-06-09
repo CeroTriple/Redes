@@ -1,0 +1,29 @@
+ANALISIS DE TRANSPORTE: TCP VS. UDP
+
+PUERTO:
+
+    Interfaz logica que identifica un proceso o servicio en un equipo.
+
+    Rango: 0 a 65535.
+
+    socket = IP + Puerto.
+
+TCP (Transmission Control Protocol):
+
+    Orientado a conexion (Three-way handshake: SYN, SYN-ACK, ACK).
+
+    Garantiza entrega, orden y correccion de errores.
+
+    Lento (overhead alto).
+
+    Uso: Web, FTP, Correo, SSH.
+
+UDP (User Datagram Protocol):
+
+    Sin conexion (envia y olvida).
+
+    No garantiza entrega ni orden.
+
+    Muy rapido (bajo overhead).
+
+    Uso: Streaming, VoIP, DNS, Juegos online.

@@ -1,0 +1,39 @@
+Aquí tienes la información sobre los puertos conocidos, optimizada para copiar y pegar en tu archivo .txt.
+PUERTOS BIEN CONOCIDOS (Well-Known Ports: 0 - 1023)
+
+1. Definición:
+Son puertos reservados por la IANA (Internet Assigned Numbers Authority) para los protocolos y servicios de red más comunes y críticos. Son los puertos en los que los servidores "escuchan" (estado LISTEN) para atender las solicitudes de los clientes.
+
+2. Lista de Puertos Forenses Clave:
+
+    20/21 (FTP): Transferencia de archivos. El 21 es para control, el 20 para datos.
+
+    22 (SSH): Acceso remoto seguro y gestión de servidores.
+
+    23 (Telnet): Acceso remoto (inseguro, tráfico en texto plano).
+
+    25 (SMTP): Envío de correo electrónico.
+
+    53 (DNS): Resolución de nombres de dominio (UDP/TCP).
+
+    80 (HTTP): Navegación web sin cifrar.
+
+    110 (POP3): Recepción de correo electrónico.
+
+    143 (IMAP): Gestión y recepción de correo electrónico.
+
+    443 (HTTPS): Navegación web segura (TLS/SSL).
+
+3. Características:
+
+    Estándar global: Son universales; cualquier cliente en el mundo sabe que para abrir una página web segura debe conectar al puerto 443.
+
+    Requieren privilegios: En sistemas Unix/Linux, solo el usuario root puede abrir y escuchar en puertos menores a 1024, lo cual es una medida de seguridad importante.
+
+4. Importancia Forense:
+
+    Detección de Servicios: Al realizar un escaneo de puertos (nmap) a una máquina sospechosa, estos son los primeros que se analizan para determinar qué servicios está ofreciendo.
+
+    Anomalías: Si un equipo está escuchando en el puerto 21 (FTP) cuando no debería ofrecer servicios de archivos, puede indicar una mala configuración o una brecha de seguridad.
+
+    Análisis de Logs: Los logs de red a menudo se filtran basándose en estos puertos para identificar tráfico malicioso (ej. ataques de fuerza bruta al puerto 22).

@@ -1,0 +1,26 @@
+PUERTOS DINAMICOS O PRIVADOS (Rango 49152 - 65535)
+
+1. Definición:
+Son puertos efímeros asignados de forma temporal por el sistema operativo a las aplicaciones cliente en el momento exacto en que estas inician una conexión hacia un servidor.
+
+2. ¿Cómo funcionan?
+
+    Cuando abres un navegador (cliente) para conectarte a un sitio web (servidor en puerto 443), el cliente selecciona automáticamente un puerto libre de este rango para la comunicación.
+
+    Una vez que la sesión finaliza o se cierra la aplicación, el puerto es liberado y queda disponible nuevamente para otras aplicaciones.
+
+3. Características Clave:
+
+    No reservados: No están asignados a ningún servicio específico ni protocolo estándar.
+
+    Asignación automática: El sistema operativo gestiona el rango y la disponibilidad de forma dinámica para evitar conflictos.
+
+    Diferencia con puertos fijos: Mientras que los puertos "Bien Conocidos" (ej. 80, 443) son donde el servidor "escucha", los puertos dinámicos son donde el cliente "responde".
+
+4. Importancia Forense:
+
+    Identificación de sesiones: En un análisis de tráfico, es común ver conexiones que van desde un puerto alto (ej. 52345) en la máquina local hacia el puerto 443 de un servidor remoto.
+
+    Rastreo de actividad: Aunque el puerto es efímero, los logs del sistema operativo (o de red) pueden correlacionar ese puerto específico con un PID (Process ID) en un momento exacto, permitiendo identificar qué proceso o malware inició la conexión.
+
+    Detección de Exfiltración: Algunos tipos de malware pueden intentar establecer conexiones de salida usando puertos dinámicos para evitar llamar la atención en firewalls que solo filtran puertos de entrada comunes.
