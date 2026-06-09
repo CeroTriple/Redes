@@ -1,0 +1,14 @@
+El Router conecta tu red local a Internet y administra el trafico enrte distintas redes. El Switch conecta multiples dispositivos por cable dentro de una misma red para que intercambien datos . EL Access point permite conectar dispositivos de forma inalambrica como en el Wi-Fi.
+
+1.Router (Enrutador):
+    Funcion principal: Recibe la señal de tu proveedor de internet y la distribuye . Se encarga de asignar direcciones IP a cada dispositivo y dirigir los datos de manera inteligente hacia su destino.
+    Conexiones: Tiene un puerto de entrada (WAN) para internet y varios puertos (LAN) para conectar cables de red. Naturalmente tiene capacidades WI-FI
+    Uso ideal: Es el equipo obligatorioque recibes de tu proveedor de internet para conectar tu hogar u oficina a la red mundial.
+2.Switch(Conmutador):
+    Funcion principal: Aunmenta la cantidad de puertos Ethernet disponibles de tu red para conectar computadoras, impresoras o consolas por cable.
+    Conexiones: Cuenta con multiples puertos .No se conecta directamente a Internet , tampoco genera Wi-Fi; nesecita estar conectado a un router para funcionar.
+    Uso ideal: Para conectar equipos fisicos de manera estable y sin perder velocidad ni generar interferencias , mu comun en oficinas o para montar redes gaming.
+3.Access Point (Punto de acceso -AP):
+    Funcional principal: Toma la conexion de tu red cableada y emite como señal Wi-Fi para que telefonos , tablets o laptops puedan conectarse.
+    Conexiones: Seconecta por medio de un cabke de red directamente al router principal.
+    Uso ideal: En lugares grandes donde la señal Wi-Fi del router no lega bin, se colocan Access Points para extender l cobertura inalambricasin perder velocidad y con el mismo nombre de red (SSID).

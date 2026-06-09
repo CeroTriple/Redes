@@ -1,0 +1,14 @@
+Una red es un conjunto de dispositivos coectados entre si que intercambian datos y comparten recursos. El ejemplo mas claro es Internet , que es una gigantesta red global que interconecta a millones de computadoras y servidores en todo el mundo .
+
+Para comprender su funcionamiento y alcance, resulta util conocer sus componentes basicos , los tipos principales y sus ventajas: 
+1.Elementos clave:
+    Dispositivos: Computadoras , telefonos , impresoras , consolas y servidores .
+    Medios de conexion: Permiten unir los equipos fisicamente (Cables de red, fibra) o de forma inalambrica (Ondas de radio , Wi-Fi , Satelites).
+    Protocolos : Son un conjunto de reglas (como TCP/IP) que permiten a los dispositivos "Hablar" el mismo idioma para entenderse.
+2.Tipos de Redes (Segun su tamaño):
+    LAN (Red de area local): Son redes pequeñas que abarcan una casa , una oficina o un edificio.
+    WAN(Red de area amplia): Cubren areas geograficas enormes , como un pais , un continente o todo el planeta.
+    WLAN (Red de area local inalambrica): Igua que una LAN pero sin cables , utilizando tecnologias como WI-FI.
+3.Utilidad Principal :
+    Permiten la comunicacion digital instantanea (Mensajeria,videollamadas, Streaming), compartir archivos entre dispositivos, centralizar informacion y conectar multiples equipos a una sola fuente de internet
+
