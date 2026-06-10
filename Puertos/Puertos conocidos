@@ -1,6 +1,3 @@
-Aquí tienes la información sobre los puertos conocidos, optimizada para copiar y pegar en tu archivo .txt.
-PUERTOS BIEN CONOCIDOS (Well-Known Ports: 0 - 1023)
-
 1. Definición:
 Son puertos reservados por la IANA (Internet Assigned Numbers Authority) para los protocolos y servicios de red más comunes y críticos. Son los puertos en los que los servidores "escuchan" (estado LISTEN) para atender las solicitudes de los clientes.
 
